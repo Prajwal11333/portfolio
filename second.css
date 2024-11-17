@@ -1,0 +1,550 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 33);
+    color: white;
+    overflow-x: hidden;
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealAnimation 2s ease-out forwards;
+}
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, orange, white, green);
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff0000;
+}
+
+::-webkit-scrollbar-corner {
+    background: #f1f1f1;
+}
+
+@keyframes revealAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    background-color:rgb(7, 11, 80);
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    height: 5rem;
+    width: 6.5rem;
+    border-radius: 20%;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    padding: 0.5rem 2.5rem;
+    border: 1px solid rgb(242, 242, 242);
+    border-radius: 35px;
+    align-items: center;
+}
+
+.ho, .about, .service, .mywork, .contact {
+    margin-right: 1.8rem;
+    font-size: 1.2rem;
+    /* cursor: pointer; */
+}
+
+
+
+button {
+    height: 2.1rem;
+    border-radius: 20px;
+    background-color: #608BC1;
+    color: white;
+    padding: 0.5rem 1.5rem 2.2rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.001);
+    box-shadow: 0px 0px 2px 2px rgb(255, 255, 255);
+    background-color: rgb(81, 134, 0);
+}
+
+.ho:hover, .about:hover, .service:hover, .mywork:hover, .contact:hover, .vid h2 {
+    /* cursor: pointer; */
+    transform: scale(1.03);
+    color: rgb(94, 94, 238);
+}
+
+.homee, .aboutt {
+    text-align: center;
+    margin-top: 2.7rem;
+    padding: 1rem;
+}
+
+.image img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.con h2 {
+    font-size: 3.5rem;
+    padding: 1rem;
+}
+
+.sde p {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.con p {
+    font-size: 1.3rem;
+    padding: 1.8rem;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.homee button {
+    margin-right: 0.4rem;
+    padding-bottom: 2rem;
+}
+
+.but {
+    margin-left: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+button img {
+    width: 1.3rem;
+    padding: 0.2rem;
+}
+
+.header button img {
+    padding: 0.4rem;
+}
+
+.aboutt p {
+    padding: 1.1rem;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+}
+
+.aboutt h2 {
+    font-size: 3.5rem;
+}
+
+.self {
+    position: relative;
+    bottom: 1.3rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.me img {
+    width: 20rem;
+    height: 26rem;
+    float: left;
+    position: relative;
+    bottom: 11rem;
+    left: 11rem;
+}
+
+.me img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.skill {
+    border: 2px solid white;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 1.2rem;
+    border-radius: 12px;
+}
+
+.allbox {
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.skill img {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-top: 0.6rem;
+    margin-right: 7rem;
+    margin-top: 2rem;
+}
+
+.heading h2, .skillset p {
+    font-size: 0.9rem;
+    line-height: 28px;
+    margin-right: 1.3rem;
+}
+
+.skill:hover, .box:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 0px 1px white;
+    background-color: rgba(52, 5, 63, 0.5);
+    animation-name: pop;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+
+.tools img {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.tools {
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 55px;
+    height: 50px;
+    margin: 0.5rem;
+    margin-top: 2.6rem;
+    position: relative;
+    right: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.3rem;
+}
+
+.tool {
+    position: relative;
+    top: 16rem;
+    right: 43rem;
+    display: flex;
+}
+
+.tools:hover, .card img:hover {
+    transform: translateY(-6px);
+    cursor: pointer;
+}
+
+.box {
+    width: 15rem;
+    height: 16rem;
+    border: 2px solid white;
+    margin: 1rem;
+    border-radius: 10px;
+    font-size: 0.1rem;
+}
+
+.box p {
+    font-size: 0.9rem;
+}
+
+.imgg img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+    margin-right: 9rem;
+}
+
+.hh h3 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    margin-right: 6rem;
+}
+
+.read {
+    margin-bottom: 6rem;
+}
+
+.pp p {
+    position: relative;
+    bottom: 0.2rem;
+    line-height: 25px;
+    text-align: left;
+    left: 0.3rem;
+}
+
+.read {
+    position: relative;
+    bottom: 2rem;
+    right: 2.5rem;
+}
+
+.read img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.3rem;
+    position: relative;
+    top: 0.5rem;
+}
+
+.serve {
+    display: flex;
+    justify-content: start;
+    position: relative;
+    bottom: 14rem;
+}
+
+.content {
+    margin-top: 22rem;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 15rem;
+}
+
+.con1, .serv1 {
+    position: relative;
+    right: 1rem;
+}
+
+.serv1 {
+    font-size: 2rem;
+}
+
+.workimg {
+    display: flex;
+    justify-content: center;
+}
+
+.work img {
+    width: 18rem;
+    height: 18rem;
+    margin: 0.6rem;
+    margin-left: 2rem;
+    position: relative;
+    bottom: 5rem;
+}
+
+.work h3 {
+    position: relative;
+    bottom: 2rem;
+}
+
+.work {
+    font-size: 3.2rem;
+    padding: 1.4rem;
+    letter-spacing: 2px;
+}
+
+.work1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    bottom: 6rem;
+}
+
+.work button {
+    position: relative;
+    bottom: 5rem;
+    border: 2px solid white;
+    padding: 1rem 2rem 2rem 2rem;
+    background-color: rgb(0, 0, 33);
+}
+
+.cd1 h2, .cd1 p {
+    font-size: 0.9rem;
+    color: black;
+}
+
+.video {
+    width: 100%;
+    height: 55rem;
+}
+
+.contactt {
+    margin: 2rem;
+    letter-spacing: 2px;
+}
+
+.enter {
+    background-color: rgba(52, 5, 63, 0.5);
+    color: grey;
+    padding: 1.3rem;
+    margin: 0.6rem;
+    border-radius: 0.6rem;
+}
+
+.contactt button {
+    margin-top: 6rem;
+}
+
+.end, .end1, .endd {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.endd {
+    justify-content: center;
+}
+
+.endd img {
+    width: 1.3rem;
+    height: 1.3rem;
+    position: relative;
+    top: 0.8rem;
+}
+
+.end1 {
+    position: relative;
+    left: 45rem;
+}
+
+#a:hover,.end1 p:hover{
+   color: #81ade4 !important;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width:800px){
+    .header{
+        background-color: transparent;
+    }
+    .end1{
+        display: none;
+    }
+
+    .serve{
+
+    }
+}
+@media (max-width: 650px) {
+    .header {
+        width: 100%;
+        /* flex-direction: column; */
+        padding: 1rem;
+        background-color: #1a60b4;
+    }
+
+    .logo img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .nav {
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .ho, .about, .service, .mywork, .contact {
+        margin-right: 0;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .me img {
+        width: 10rem;
+        height: 14rem;
+        position: relative;
+        bottom: 6rem;
+        left: 1.5rem;
+    }
+
+    .skill {
+        width: 100px;
+        height: 100px;
+        gap: 0.1rem;
+    }
+
+    .tools {
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .tools img{
+        transform: scale(0.7);
+    }
+
+    .work img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .video {
+        height: 30rem;
+    }
+  
+     .abtmepara p{
+        font-size: 1rem;
+        text-align: left;
+     }
+    .serve{
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+     
+    .end{
+        width:100%;
+    }
+    .end1{
+        display: none;
+    }
+
+    .endd p{
+        display: none;
+    }
+
+    .abtmeboxes{
+        display: flex;
+       gap: 0.2rem;
+    }
+
+  
+}
